@@ -1,9 +1,9 @@
-import { mainVideo } from "../api/movieApi";
+const {mainVideo} = require("../api/movieApi")
 
 const mainMovieVideo = async (req,res,next)=>{
-    const mainMovieId = req.params;
-    const result = await mainVideo(mainMovieId);
-    res.json(result.results)
+    const {id} = req.params;
+    const result = await mainVideo(id);
+   res.json(result.data)
 }
 
-export default mainMovieVideo
+module.exports = mainMovieVideo;

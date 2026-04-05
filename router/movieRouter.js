@@ -1,5 +1,6 @@
 const express = require ("express")
-const {popularMovie,trendingMovie,topRatedMovies} = require("../middleware/movie")
+const {popularMovie,trendingMovie,topRatedMovies} = require("../middleware/movie");
+const  mainMovieVideo  = require("../middleware/mainMovieVideo");
 const MovieRouter = express.Router()
 
 
