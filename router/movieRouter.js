@@ -6,6 +6,7 @@ const MovieRouter = express.Router()
 MovieRouter.get("/movies/popular", popularMovie);
 MovieRouter.get("/movies/trending",trendingMovie);
 MovieRouter.get("/movies/top_rated",topRatedMovies);
+MovieRouter.get("/mainMovie/video/:id",mainMovieVideo)
 
 
 

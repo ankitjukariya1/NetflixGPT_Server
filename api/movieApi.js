@@ -11,5 +11,9 @@ const movieApi = require("./axiosInstance")
  const topRated = async ()=>{
   return await movieApi.get(`/movie/top_rated?api_key=${process.env.API_KEY}`)
  }
- module.exports = {popular,trending,topRated};
+
+ const mainVideo = async (movieId)=>{
+  return await movieApi.get(`movie/${movieId}/videos?api_key=${process.env.API_KEY}`);
+ }
+ module.exports = {popular,trending,topRated,mainVideo};
 
